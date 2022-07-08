@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Number generator : Vanilla JS</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      input{
+        margin: 10px;
+        padding: 8px;
+      }
+      #outer-wrapper div:nth-child(1){
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        align-items: center;
+      }
+      button {
+        padding: 10px;
+        background-color: #231f20;
+        color: #fff;
+        border: none;
+      }
+
+      #result{
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="outer-wrapper">
+      <div>
+        <input value="" placeholder="Enter the limit" id="limit" type="number" />
+      <button id="generate">Generate</button>
+      </div>  
+      <div id="result"> </span>
+    </div>    
+    <script>
+      let limit = document.getElementById("limit");
+      let resultValue = document.getElementById("result");
+      let button = document.getElementById("generate");
+
+      button.addEventListener("click", () => {
+        if (limit.value.length !== 0) {
+          result.innerHTML = `<p> Result : ${Math.floor(
+            Math.random(limit.value) * parseInt(limit.value)
+        )}</p>`
+        }
+      });
+    </script>
+  </body>
+</html>
